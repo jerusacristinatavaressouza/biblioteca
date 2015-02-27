@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace BibliotecaClassLibrary.Data
 {
-    internal class CategoriaData
+    internal class CategoriaData:DBConnection
     {
         internal CategoriaData (string strConn):base(strConn){}
             internal void Create (Categoria e)
@@ -17,7 +17,7 @@ namespace BibliotecaClassLibrary.Data
                 cmd.Connection = conn;
                 cmd.CommandText = "insert into Categoria values(@nome)";
                 cmd.Parameters.AddWithValue("@nome", e.Nome);
-                cmd.ExecuteNonQuery Now Query();
+                cmd.ExecuteNonQuery();
             }
 
     }
