@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\AutorData.cs" />
     <Compile Include="Data\CategoriaData.cs" />
     <Compile Include="Data\DBConnection.cs" />
     <Compile Include="Entity\Autor.cs" />

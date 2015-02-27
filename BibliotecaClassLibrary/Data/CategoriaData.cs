@@ -20,5 +20,14 @@ namespace BibliotecaClassLibrary.Data
                 cmd.ExecuteNonQuery();
             }
 
+        internal void Update (Categoria e)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "Update Autor set nome = @nome where idCategoria = @id";
+            cmd.Parameters.AddWithValue("@id", e.IdCategoria);
+            cmd.Parameters.AddWithValue("@nome", e.Nome);
+            cmd.ExecuteNonQuery();
+
     }
 }
